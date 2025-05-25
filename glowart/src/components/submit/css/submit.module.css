@@ -1,0 +1,274 @@
+/* 整體頁面背景和排版 */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+  margin-bottom: 40px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 1000px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  padding: 30px;
+  background-color: rgba(157, 157, 157, 0.2);
+  transition: all 0.3s ease;
+}
+
+.content:hover {
+  transform: translateY(-5px);
+}
+
+/* 標題樣式 */
+.h_1 {
+  font-size: 38px;
+  font-family: "GenWanMin2 TW", serif;
+  color: #333;
+  margin-bottom: 15px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #616D90;
+  position: relative;
+}
+
+.h_1::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 80px;
+  height: 2px;
+  background-color: #616D90;
+}
+
+/* 標準輸入欄位和標籤 */
+.lab {
+  background: linear-gradient(to bottom, #f8f9fa, #f1f3f5);
+  padding: 20px 30px;
+  height: auto;
+  min-height: 70px;
+  font-size: 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  border-left: 4px solid #616D90;
+}
+
+.lab:hover {
+  background: linear-gradient(to bottom, #f1f3f5, #e9ecef);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.inp {
+  margin: 0 30px;
+  width: 70%;
+  height: 40px;
+  padding: 0 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inp:focus {
+  border-color: #616D90;
+  box-shadow: 0 0 0 3px rgba(97, 109, 144, 0.1);
+  outline: none;
+}
+
+/* 日期輸入欄位 */
+.inpDate {
+  margin: 0 15px;
+  width: 160px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.inpDate:focus {
+  border-color: #616D90;
+  box-shadow: 0 0 0 3px rgba(97, 109, 144, 0.1);
+  outline: none;
+}
+
+/* 圖片上傳區域 */
+.labImg {
+  background: linear-gradient(to bottom, #f8f9fa, #f1f3f5);
+  display: flex;
+  padding: 30px;
+  font-size: 18px;
+  border-radius: 12px;
+  gap: 80px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  border-left: 4px solid #616D90;
+  transition: all 0.3s ease;
+}
+
+.labImg:hover {
+  background: linear-gradient(to bottom, #f1f3f5, #e9ecef);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 分類標籤區域 */
+.labCategoryWrapper {
+  display: flex;
+  background: linear-gradient(to bottom, #f8f9fa, #f1f3f5);
+  padding: 25px 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  align-items: flex-start;
+  gap: 20px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  border-left: 4px solid #616D90;
+  transition: all 0.3s ease;
+}
+
+.labCategoryWrapper:hover {
+  background: linear-gradient(to bottom, #f1f3f5, #e9ecef);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.labCategory {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 30px;
+  flex: 1;
+  background-color: transparent;
+  padding: 5px 0;
+}
+
+.labCategory label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: 30px;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.labCategory label:hover {
+  background-color: #f8f9fa;
+  border-color: #616D90;
+}
+
+.labCategory input[type="checkbox"] {
+  accent-color: #616D90;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* 文本區域 */
+.labtext {
+  background: linear-gradient(to bottom, #f8f9fa, #f1f3f5);
+  padding: 20px 30px;
+  height: 300px;
+  font-size: 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  border-left: 4px solid #616D90;
+  transition: all 0.3s ease;
+}
+
+.labtext:hover {
+  background: linear-gradient(to bottom, #f1f3f5, #e9ecef);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.inptext {
+  margin: 0 30px;
+  width: 80%;
+  height: 85%;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: auto;
+  resize: none;
+  font-size: 16px;
+  background-color: white;
+  transition: all 0.3s ease;
+  line-height: 1.5;
+}
+
+.inptext:focus {
+  border-color: #616D90;
+  box-shadow: 0 0 0 3px rgba(97, 109, 144, 0.1);
+  outline: none;
+}
+
+/* 按鈕樣式 */
+.submitPostButton {
+  background-color: rgba(176, 196, 210);
+  color: white;
+  border: none;
+  padding: 14px 42px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: auto;
+  font-family: "GenWanMin2 TW", sans-serif;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.5s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.submitPostButton:hover {
+  background-color: rgba(77, 103, 133, 0.8);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.submitPostButton:hover::before {
+  width: 100%;
+}
+
+.submitPostButton:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(97, 109, 144, 0.2);
+}
+
+.saveDraftButton {
+  background-color: white;
+  color: #616D90;
+  border: 2px solid #616D90;
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "GenWanMin2 TW", sans-serif;
+  margin-right: 15px;
+}
+
+.saveDraftButton:hover {
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 12px rgba(97, 109, 144, 0.1);
+}
+
+/* 單選按鈕樣式 */
+input[type="radio"] {
+  accent-color: #616D90;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  margin-left: 15px;
+  cursor: pointer;
+}

@@ -1,0 +1,56 @@
+.profileBox {
+  background-color: #fefefb;
+  padding: 40px;
+  border-radius: 10px;
+  font-family: "GenWanMin2 TW", sans-serif;
+  font-size: 18px;
+  color: #546e7a;
+  /* 灰藍色 */
+  width: 90%;
+  position: relative;
+}
+
+.profileRow {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.label {
+  letter-spacing: 0.3em;
+}
+
+.value {
+  letter-spacing: 0.3em;
+  color: #546e7a;
+}
+
+.divider {
+  border-bottom: 2px solid #78909c;
+  margin-bottom: 20px;
+}
+
+.but {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #C0B6B6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  top: -30px;
+  right: -30px;
+  position: absolute;
+  font-family: GenWanMin2 TW, serif;
+
+}
+
+.input {
+  margin-left: 4%;
+}
+
+
+.saveBtn {
+  position: relative;
+  left: 10px;
+}

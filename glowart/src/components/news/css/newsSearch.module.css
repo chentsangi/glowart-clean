@@ -1,0 +1,84 @@
+html,body {
+  font-family: "GenWanMin2 TW", sans-serif;
+  background: #f8f8f8;
+}
+
+.searchWrapper {
+  display: flex;
+  padding: 10px;
+  background-color:#f8f5fa;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1%;
+  display: flex;
+}
+
+.searchForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  background-color: #e0e3ec;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.form-group label {
+  margin-right: 6px;
+  font-size: 16px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 14px;
+  outline: none;
+   width: 250px;
+   margin: 5px;
+   z-index: 10; 
+
+}
+
+#category {
+  width: 300px;  
+}
+
+.full-width {
+  width: 55%;
+  margin-top: 10px;  /*全部類別-白色*/
+}
+
+.full-width select {
+  width: 100%;
+}
+
+.searchBtn {
+  background-color: rgba(176, 196, 210, 0.6);
+  border: none;
+  padding: 14.5px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  top: -5px;
+  transition: all 0.5s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: GenWanMin2 TW;
+  width: 10%;
+}
+
+.searchBtn:hover {
+  background-color: rgba(77, 103, 133, 0.8);
+  /* 懸停時顏色變深 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* 懸停時陰影加深 */
+}

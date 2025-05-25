@@ -1,0 +1,135 @@
+html, body {
+    font-family: GenWanMin2 TW;
+}
+
+#newsTitle {
+    text-align: right;
+    position: relative;
+    width: 100%;
+    overflow: hidden; 
+}
+
+#newsTitleImg {
+    height: auto;
+    width: 600px;
+    max-width: 100%; 
+    margin-bottom: 80px;
+}
+
+#newsBox {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
+    width: 100%;
+}
+
+#newsRectangle {
+    width: 800px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: -150px;
+    pointer-events: none;
+    z-index: 1; 
+}
+
+.newsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 10;
+    width: 800px;
+    margin-right: 503px;
+    top: -135px;
+}
+
+.newsList li {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    margin: 15px 0;
+    padding: 10px 0;
+    height: 50px;
+}
+
+.newsList li a {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+    align-items: center;
+}
+
+.newsTitle {
+    flex: 1;
+    padding: 10px 15px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    font-size: 25px;
+    color: #000000;
+    white-space: nowrap;     /* 防止文字折行 */
+    overflow: hidden;        /* 隱藏超出部分 */
+    text-overflow: ellipsis; /* 超出部分顯示省略號 */
+}
+
+.newsDate {
+    color: #000000;
+    font-size: 15px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+/* hover */
+.newsList li:hover .newsTitle {
+    background-color: #d9dfe6;
+    font-size: 23px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.newsList li:hover .newsDate {
+    background-color: rgba(227, 190, 173, 0.87);
+    color: #333;
+    font-size: 23px;
+}
+
+#previewBox {
+    display: none;
+    position: absolute;
+    top: -110px;
+    right: 90px;
+    z-index: 999;
+    pointer-events: none;
+    background: white;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    width: 400px;
+    height: auto;
+}
+
+#previewImg {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+#moreArrow {
+    position: relative;
+    bottom: -345px;
+    right: 292px;
+    z-index: 15;
+}
+
+#moreArrow img {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#moreArrow img:hover {
+    transform: scale(1.05);
+}

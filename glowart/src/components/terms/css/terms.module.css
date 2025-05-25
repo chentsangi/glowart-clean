@@ -1,0 +1,104 @@
+body{
+  font-family: GenWanMin2 TW;
+
+}
+.en {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: #666;
+  font-size: 20px;
+  padding-left: 2%;
+  display: inline-block;
+  width: 100%;
+}
+
+.zh {
+  font-size: 30px;
+  margin-bottom: 100px;
+
+}
+
+.title {
+  padding-left: 10px;
+  font-size: 50px;
+  position: relative;
+  left: 140px;
+
+
+}
+
+.center {
+  display: flex;
+  /* justify-content: center;   */
+  /* align-items: center; */
+  min-height: 100vh;
+  /* padding-top: 60px; */
+  flex-direction: column;
+  padding-left: 20%
+}
+
+.termsUl {
+  list-style-position: inside;
+  position: relative;
+  left: 200px;
+}
+
+.btnWrapper {
+  /* background-color: #a7a0a0; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; 水平置中 */
+  gap: 16px;
+  /*子元素垂直間距*/
+  padding-left: 18%;
+  padding-top: 8%;
+  font-size: 30px;
+}
+
+.inputNext {
+  transform: scale(3);
+  margin-right: 3%;
+}
+
+.nextBtn {
+  background-color: rgba(176, 196, 210, 0.6);
+  padding: 10px 24px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  right: 25%;
+  transition: all 0.5s ease;
+  /* 添加1秒的平滑過渡效果 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: GenWanMin2 TW;
+  width: 10%;
+}
+
+.nextBtn:hover {
+  background-color: rgba(77, 103, 133, 0.8);
+  /* 懸停時顏色變深 */
+  transform: translateY(-3px);
+  /* 懸停時輕微上浮 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* 懸停時陰影加深 */
+}
+
+.miniImg {
+  position: relative;
+  top: 8px;
+  width: 55px;
+  margin-right: 30px;
+  left: 0px;
+}
+
+.textBlock {
+  background-color: rgba(203, 215, 223, 0.5);
+  width: 78%;
+  border-radius: 8px;
+}
+.agreeText{
+  font-family: GenWanMin2 TW;
+}

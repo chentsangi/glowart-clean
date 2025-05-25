@@ -1,0 +1,422 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 50px 0px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .flex {
+        padding: 0px 30px 0px;
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .flex {
+        padding: 0 0 0px;
+    }
+}
+
+.title {
+    /* display: flex; */
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    padding: 10px 90px;
+    font-size: 22px;
+    /* border: solid; */
+    width: 100%;
+}
+
+.title h1 {
+    max-width: 1000px;
+    letter-spacing: 4px;
+     line-height: 1.2;
+}
+
+.title h5 {
+    margin: 10px 0;
+    color: rgb(128, 126, 118, 100);
+    letter-spacing: 4px;
+}
+
+@media screen and (min-width: 1171px) {
+    .title {
+        width: 1000px;
+        /* padding: 20px 0px; */
+    }
+}
+
+@media screen and (max-width: 1170px) and (min-width: 768px) {
+    .title {
+        padding: 0px 30px;
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .title {
+        padding: 0 20px;
+        font-size: 16px;
+    }
+}
+
+.twoContent {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* padding: 10px 90px; */
+    font-size: 20px;
+    line-height: 180%;
+    /* margin: 0 5%; */
+}
+
+@media screen and (min-width: 941px) {
+    .twoContent {
+        width: 850px;
+        /* padding: 20px 0px; */
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 940px) and (min-width: 768px) {
+    .twoContent {
+        width: 100%;
+        padding: 0 50px;
+        margin: 0 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .twoContent {
+        padding: 0 20px;
+        /* font-size: 16px; */
+    }
+}
+
+.banner {
+    /* border: solid; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.share {
+    /* border: solid; */
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.share img {
+    width: 60px;
+}
+
+.share .like img {
+    width: 75px;
+}
+
+.share .like {
+    margin-left: auto;
+    /* 把.like推到最右 */
+    display: flex;
+    align-items: end;
+}
+
+.fontpt {
+    transform-origin: top;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: #eee;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    /* padding: 3px; */
+    transform: scale(1.1);
+
+    height: 35px;
+    align-items: center;
+    margin: 0 20px 10px;
+    padding: 0 4px;
+}
+
+.fontpt a {
+    /* width: 16px; */
+    line-height: 26px;
+    text-align: center;
+    font-weight: 500;
+    color: #999;
+    padding: 0 6px;
+    /* 新增左右內距，讓字跟字之間不會擠在一起 */
+}
+
+.fontpt .fontnow {
+    background-color: #fff;
+    color: #111;
+    border-radius: 2px;
+    font-size: 15px;
+}
+
+.fontpt a:hover {
+    color: #222;
+}
+
+.s {
+    font-size: 12px;
+}
+
+.l {
+    font-size: 20px;
+}
+
+.twoContent .fontptSmall {
+    display: none;
+}
+
+.twoContent .fontptSmall .m {
+    font-size: 16px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .share {
+        width: 850px;
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .share img {
+        width: 40px;
+    }
+
+    .share .like img {
+        width: 50px;
+    }
+
+    .fontpt {
+        /* transform: scale(0.8); */
+        visibility: hidden;
+    }
+
+    .twoContent .fontptSmall {
+        margin: 0 10px 0;
+        display: flex;
+        visibility: visible;
+        width: fit-content;
+        margin-left: auto;
+    }
+}
+
+.sFont {
+    font-size: 18px;
+}
+
+.lFont {
+    font-size: 24px;
+}
+
+
+/* 延伸閱讀 */
+.recommandList {
+    width: 100%;
+    /* justify-content: center; */
+    /* border: solid; */
+    max-width: 800px;
+    /* margin: 0 100px; */
+    margin: auto;
+}
+
+.recommandList .recommand {
+    /* border: solid; */
+    /* display: inline; */
+    width: 100%;
+    /* margin: 0 100px; */
+    border-bottom: 1px solid #ADACAC;
+}
+
+.recommandList .recommand h4 {
+    font-size: 28px;
+}
+
+.recommandList .recommand hr {
+    color: #ADACAC;
+}
+
+.recommandList .listBox * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.recommandList .listBox {
+    /* background: #f2f2f2; */
+    padding: 30px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+}
+
+/* 卡片組件外部容器 */
+.recommandList .listBox .exhibitionCard {
+    width: 200px;
+    margin-bottom: 20px;
+    position: relative;
+    /* scale: 1.1; */
+}
+
+/* 圖片卡片部分 */
+.recommandList .listBox .exhibitionCard .cardImageContainer {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.recommandList .listBox .exhibitionCard .cardImageContainer .cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 遮罩層 */
+.recommandList .listBox .exhibitionCard .cardImageContainer .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: black;
+}
+
+.recommandList .listBox .exhibitionCard:hover .overlay {
+    opacity: 0.15;
+}
+
+
+/* 卡片文字區 */
+.recommandList .listBox .exhibitionCard .cardText {
+    font-weight: 300;
+    text-shadow: 0px 1.6px 1.4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    padding-top: 8px;
+    line-height: 1.2;
+}
+
+.recommandList .listBox .exhibitionCard .cardText h2 {
+    font-size: 18px;
+    font-weight: 300;
+    color: #584133;
+    margin: 2.5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.recommandList .listBox .exhibitionCard .cardText p {
+    font-size: 14px;
+    /* color: #584133; */
+    margin: 2.5px 0;
+    color: #807E76;
+}
+
+/* 清除連結樣式 */
+.recommandList .listBox .exhibitionCard a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media screen and (max-width: 880px) and (min-width: 680px) {
+    .recommandList .listBox {
+        display: block;
+        padding: 30px 100px;
+    }
+
+    .recommandList .listBox .exhibitionCard {
+        margin: 50px auto;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 679px) {
+    .recommandList .listBox {
+        display: block;
+    }
+
+    .recommandList .listBox .exhibitionCard {
+        /* margin: 50px auto;
+        scale: 1.1; */
+        width: 100%;
+    }
+}
+
+.twoContent p {
+    text-align: justify;
+}
+
+/* 回上頁 */
+.return {
+    font-size: 26px;
+    /* display: block; */
+    width: 100%;
+    justify-content: center;
+    /* border: solid; */
+    margin: 25px 0;
+}
+
+
+@media screen and (min-width: 1222px) {
+    .return {
+        width: 1050px;
+    }
+}
+
+@media screen and (max-width: 1221px) and (min-width: 881px) {
+    .return {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 880px) and (min-width: 768px) {
+    .return {
+        padding: 0 20px;
+        margin: 0 0 25px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .return {
+        padding: 0 40px;
+        font-size: 24px;
+        margin: 0 0 25px 0;
+    }
+}
+
+.linkStyle {
+    text-decoration: none;
+    text-decoration-color: none;
+    color: inherit;
+}
+
+.linkStyle:hover {
+    text-decoration: none;
+    text-decoration-color: none;
+    color: inherit;
+}

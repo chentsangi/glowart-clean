@@ -1,0 +1,288 @@
+
+/* 整體布局 */
+.Menu {
+    width: 10%;
+    padding-right: 20px;
+    box-sizing: border-box;
+   
+}
+
+.Ticket {
+    width: 70%;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    /* padding: 0 15px; */
+     position: relative;
+    top: 10.5px;
+    left: 10px;
+}
+
+/* 票券卡片 */
+.tickets {
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.tickets:hover {
+    transform: translateY(-5px);
+}
+
+.cardTop {
+    display: flex;
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-color: white;
+}
+
+.exhibit {
+    flex: 1;
+    object-fit: cover;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.cardTop:hover .exhibit {
+    transform: scale(1.05);
+}
+
+/* 票券控制區 */
+.ticketControl {
+    width: 120px;
+    height: 100%;
+    background: linear-gradient(to right, #e0e3ee, #d8dbe6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-left: 1px dashed rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.ticketControl::before,
+.ticketControl::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.ticketControl::before {
+    top: -10px;
+}
+
+.ticketControl::after {
+    bottom: -10px;
+}
+
+/* 數量控制 */
+.alteration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.push {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #555;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.push:hover {
+    background-color: #f0f0f0;
+}
+
+.push:active {
+    background-color: #e0e0e0;
+    transform: scale(0.95);
+}
+
+.PayNumber {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    width: 25px;
+    text-align: center;
+}
+
+/* 價格區域 */
+.MoneyArea {
+    text-align: center;
+}
+
+.Money {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 12px 0;
+    position: relative;
+}
+
+.Money::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* 購物車按鈕 */
+.incar {
+    padding: 8px 12px;
+    border-radius: 30px;
+    background-color: #616D90;
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-family: "GenWanMin2 TW", sans-serif;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(97, 109, 144, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.incar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg, 
+        rgba(255,255,255,0) 0%, 
+        rgba(255,255,255,0.2) 50%, 
+        rgba(255,255,255,0) 100%
+    );
+    transition: all 0.6s ease;
+}
+
+.incar:hover {
+    background-color: #4f5a7a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(97, 109, 144, 0.4);
+}
+
+.incar:hover::before {
+    left: 100%;
+}
+
+.incar:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(97, 109, 144, 0.3);
+}
+
+/* 卡片底部 */
+.cardBottom {
+    padding: 10px 0;
+    width: 100%;
+}
+
+.show {
+    color: #333;
+    font-size: 16px;
+    font-family: "GenWanMin2 TW", sans-serif;
+    margin: 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.show:first-child {
+    font-weight: 600;
+    font-size: 18px;
+    color: #222;
+}
+
+/* 價格對比標籤 - 套用在數量控制區域上方 */
+.priceTag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(189, 29, 29, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 分頁容器 */
+.pagecontainer {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px;
+  
+}
+
+.pagination button {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  background-color: white;
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  
+}
+/* .pagination button:hover {
+    border-color: #616D90;
+    color: #616D90;
+} */
+
+.pagination button.activePage {
+    color: #BD1D1D;
+
+}
+
+/* 載入中狀態 */
+.loadingContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.loadingSpinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #616D90;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}

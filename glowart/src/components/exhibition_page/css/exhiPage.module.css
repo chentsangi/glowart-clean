@@ -1,0 +1,673 @@
+body {
+    padding: 0;
+    font-family: GenWanMin2 TW;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 50px 0px;
+}
+
+@media screen and (min-width: 1151px) {
+    .flex{
+        padding: 10px 50px 0px;
+        /* width: 1200px; */
+    }
+}
+
+@media screen and (max-width: 1150px) and (min-width: 768px) {
+    .flex {
+        padding: 0px 30px 0px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .flex {
+        padding: 0 30px 0;
+    }
+}
+
+.title {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    padding: 10px 90px;
+    font-size: 28px;
+    /* border: solid; */
+    width: 100%;
+}
+
+.title h1 {
+    letter-spacing: 4px;
+    max-width: 1150px;
+      line-height: 1.2;
+}
+
+@media screen and (min-width: 1222px) {
+    .title {
+        width: 1150px;
+        /* padding: 20px 0px; */
+        padding: 10px 90px;
+    }
+}
+
+@media screen and (max-width: 1221px) and (min-width: 1150px) {
+    .title {
+        padding: 10px 90px;
+    }
+}
+
+@media screen and (max-width: 1149px) and (min-width: 768px) {
+    .title {
+        padding: 0px 0px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .title {
+        padding: 0 20px;
+        font-size: 22px;
+    }
+}
+
+.twoContent {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* padding: 10px 90px; */
+    font-size: 20px;
+    line-height: 180%;
+    /* margin: 0 5%; */
+}
+
+@media screen and (min-width: 1222px) {
+    .twoContent {
+        width: 1100px;
+        /* padding: 20px 0px; */
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1222px) and (min-width: 768px) {
+    .twoContent {
+        padding: 0px 0px;
+        margin: 0 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .twoContent {
+        padding: 0 20px;
+        /* font-size: 16px; */
+        margin: 0 50px;
+    }
+}
+
+.banner {
+    /* border: solid; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.share {
+    /* border: solid; */
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.share img {
+    width: 60px;
+}
+
+.share .like img {
+    width: 75px;
+}
+
+.share .like {
+    margin-left: auto;
+    /* 把.like推到最右 */
+    display: flex;
+    align-items: end;
+}
+
+.fontpt {
+    transform-origin: top;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: #eee;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    /* padding: 3px; */
+    transform: scale(1.1);
+
+    height: 35px;
+    align-items: center;
+    margin: 0 20px 10px;
+    padding: 0 4px;
+}
+
+.fontpt a {
+    /* width: 16px; */
+    line-height: 26px;
+    text-align: center;
+    font-weight: 500;
+    color: #999;
+    padding: 0 6px;
+    /* 新增左右內距，讓字跟字之間不會擠在一起 */
+}
+
+.fontpt .fontnow {
+    background-color: #fff;
+    color: #111;
+    border-radius: 2px;
+    font-size: 15px;
+}
+
+.fontpt a:hover {
+    color: #222;
+}
+
+.s {
+    font-size: 12px;
+}
+
+.l {
+    font-size: 20px;
+}
+
+.fontptSmall {
+    display: none;
+}
+
+.fontptSmall .m {
+    font-size: 16px;
+}
+
+@media screen and (min-width: 1222px) {
+    .share {
+        width: 1100px;
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .share img {
+        width: 40px;
+    }
+
+    .share .like img {
+        width: 50px;
+    }
+
+    .fontpt {
+        /* transform: scale(0.8); */
+        visibility: hidden;
+    }
+
+    .fontptSmall {
+        margin: 0 10px 0;
+        display: flex;
+        visibility: visible;
+        width: fit-content;
+        margin-left: auto;
+    }
+}
+
+
+/* .twoCol {
+max-width: 1200px;
+width: 100%;
+flex-direction: row-reverse;
+padding: 10px 70px 40px 20px;
+} */
+
+.twoCol .leftRight {
+    /* width: calc(100% - 150px); */
+    /* display: flex; */
+    flex: inherit;
+    /* border: solid; */
+}
+
+@media screen and (min-width: 768px) {
+    .leftRight {
+        display: flex;
+    }
+
+    .colLeft {
+        width: 35%;
+        padding: 20px 40px 0 20px;
+    }
+
+    .colRight {
+        width: 65%;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+    .leftRight {
+        display: block;
+    }
+
+    .colLeft {
+        width: 100%;
+        padding: 0;
+        line-height: 150%;
+    }
+
+    .colRight {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+
+/* .twoCol .colLeft {
+width: 40%;
+border: solid;
+} */
+
+.twoCol .colRight {
+    /* width: 60%; */
+    position: relative;
+    /* padding: 10px; */
+    /* border: solid; */
+    display: flex;
+    flex-direction: column;
+    /* 先直向排列 */
+    align-items: flex-end;
+    /* 因買票靠右 */
+}
+
+.colRight p {
+    text-align: justify;
+}
+
+.exbInfo {
+    border-bottom: 1px solid #ADACAC;
+    max-width: 840px;
+}
+
+.exbInfo {
+    padding: 15px 0;
+    border-top: 1px solid #ADACAC;
+    list-style-type: none
+}
+
+.exbInfo h5 {
+    font-size: 16px;
+    color: #999;
+    margin: 0;
+}
+
+.exbInfo p {
+    font-size: 18px;
+    color: #555;
+    margin: 0;
+}
+
+.exbInfo a {
+    font-weight: 400;
+    color: #444;
+}
+
+.exbInfo a:hover {
+    color: #e42144;
+}
+
+.exbInfo li {
+    margin-bottom: 12px;
+}
+
+.sFont {
+    font-size: 18px;
+}
+
+.lFont {
+    font-size: 24px;
+}
+
+.hashTagContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* 標籤之間的間距 */
+}
+
+.hashTag {
+    font-size: 18px;
+    padding: 0 15px;
+    display: inline-block;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: #DFDAD9;
+    color: #583333;
+}
+
+/* 推薦展覽 */
+.recommand {
+    /* border: solid; */
+    /* display: inline; */
+    width: 100%;
+    /* margin: 0 100px; */
+    border-bottom: 1px solid #ADACAC;
+}
+
+.recommand h4 {
+    font-size: 28px;
+}
+
+/* .listBox {
+display: flex;
+flex-wrap: wrap;
+border: solid;
+}
+
+.exhibitionCard {
+margin: 0 30px;
+} */
+
+.recommandList {
+    width: 100%;
+    /* justify-content: center; */
+    /* border: solid; */
+    max-width: 800px;
+    /* margin: 0 100px; */
+    margin: auto;
+}
+
+.recommandList .recommand h4 {
+    font-weight: 400;
+}
+
+.recommandList .listBox * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.recommandList .listBox {
+    /* background: #f2f2f2; */
+    padding: 30px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 962px) and (min-width: 590px) {
+    .recommandList .listBox {
+        display: block;
+    }
+
+    .recommandList .listBox .exhibitionCard {
+        margin: 50px auto;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .recommandList .listBox {
+        display: block;
+    }
+
+    .recommandList .listBox .exhibitionCard {
+        margin: 30px auto;
+        /* scale: 1.1; */
+        width: 100%;
+    }
+
+    .recommandList .recommand h4 {
+        /* font-size: 24px; */
+        margin: 1.33em 1em;
+    }
+}
+
+/* 卡片組件外部容器 */
+.exhibitionCard {
+    width: 200px;
+    margin-bottom: 20px;
+    /* scale: 1.1; */
+}
+
+/* 圖片卡片部分 */
+.exhibitionCard .cardImageContainer {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.exhibitionCard .cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 遮罩層 */
+.exhibitionCard .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .4s ease;
+    background-color: rgba(187, 182, 203, 0.9);
+    padding: 20px;
+}
+
+.exhibitionCard .dateGroup {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.exhibitionCard .dateBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exhibitionCard:hover .overlay {
+    opacity: 1;
+}
+
+/* 文字遮罩 */
+.exhibitionCard .textMask {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 上滑文字 */
+.exhibitionCard .textBox.slideUp {
+    transform: translateY(-100%);
+    transition: transform 0.7s ease;
+    height: 18px;
+}
+
+.exhibitionCard:hover .textBox.slideUp {
+    transform: translateY(0);
+    transition: transform 0.7s ease 0.2s;
+}
+
+/* 下滑文字 */
+.exhibitionCard .textBox.slideDown {
+    transform: translateY(100%);
+    transition: transform 0.7s ease;
+    height: 32px;
+}
+
+.exhibitionCard:hover .textBox.slideDown {
+    transform: translateY(0);
+    transition: transform 0.7s ease 0.2s;
+}
+
+/* 年份樣式 */
+.exhibitionCard .year {
+    font-size: 12px;
+    margin: 0 0 8px;
+    color: white;
+}
+
+/* 日期樣式 */
+.exhibitionCard .date {
+    font-size: 24px;
+    margin: 0;
+    color: white;
+}
+
+/* 線條容器 */
+.exhibitionCard .symbolMask {
+    overflow: hidden;
+    position: relative;
+    width: 40px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 線條 */
+.exhibitionCard .line {
+    width: 60%;
+    height: 1px;
+    background-color: white;
+    opacity: 0;
+}
+
+@keyframes lineOpen {
+    0% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+.exhibitionCard:hover .line {
+    animation: lineOpen 0.6s ease forwards;
+    transform-origin: center;
+}
+
+/* 卡片文字區 */
+.exhibitionCard .cardText {
+    font-weight: 400;
+    text-shadow: 0px 1.6px 1.4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 2px;
+    padding-top: 8px;
+    line-height: 1.2;
+}
+
+.exhibitionCard .cardText h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #584133;
+    margin: 2.5px 0;
+}
+
+.exhibitionCard .cardText p {
+    font-size: 14px;
+    color: #584133;
+    margin: 2.5px 0;
+}
+
+/* 狀態標籤 */
+.exhibitionCard .status {
+    font-size: 12px;
+    color: #BD1D1D;
+}
+
+.exhibitionCard .status span {
+    border-left: solid 1px;
+    padding-left: 7px;
+    margin-left: 6px;
+}
+
+.exhibitionCard .status.soon {
+    color: #728DED;
+}
+
+.exhibitionCard .status.end {
+    color: #8B8C89;
+}
+
+/* 清除連結樣式 */
+.exhibitionCard a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 回上頁 */
+.return {
+    font-size: 26px;
+    /* display: block; */
+    width: 100%;
+    justify-content: center;
+    /* border: solid; */
+    margin: 25px 0 ;
+}
+
+@media screen and (min-width: 1222px) {
+    .return {
+        width: 1050px;
+    }
+}
+
+@media screen and (max-width: 1221px) and (min-width: 881px) {
+    .return {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 880px) and (min-width: 768px) {
+    .return {
+        padding: 0 20px;
+        margin: 0 0 25px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .return {
+        padding: 0 40px;
+        font-size: 24px;
+        margin: 0 0 25px 0;
+    }
+}   
+
+.linkStyle {
+    text-decoration: none;
+    text-decoration-color: none;
+    color: inherit;
+}
+
+.linkStyle:hover {
+    text-decoration: none;
+    text-decoration-color: none;
+    color: inherit;
+}

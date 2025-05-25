@@ -1,0 +1,165 @@
+.sliderContainer {
+    width: 70%; /* 調整整體寬度*/
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative; /* 保留相對定位，確保絕對定位元素正確 */
+}
+
+.sliderContainer .imageSlider {
+    width: 100%;
+    overflow: hidden;
+    margin: 30px 0;
+}
+
+.sliderContainer .imageSlider .imageSliderTrack {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+}
+
+.sliderContainer .imageSlider .imageSliderTrack .imageCard {
+    width: 200px;
+    flex-shrink: 0;
+    margin-right: 28px; /* 卡片之間的間距 */
+}
+
+.sliderContainer .imageSlider .imageSliderTrack .imageCard a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sliderContainer .imageSlider .imageSliderTrack .imageCard a .imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    box-shadow: 6px 6px 2px 3px rgba(164, 158, 158, 0.4);
+}
+
+.sliderContainer .imageSlider .imageSliderTrack .imageCard a .imageWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Overlay 效果 */
+.sliderContainer .imageSlider .imageSliderTrack .imageCard a .imageWrapper .overlay {
+    position: absolute;
+    background-color:rgba(204, 160, 140, 0.87);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    overflow: hidden;
+    transition: 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sliderContainer .imageSlider .imageSliderTrack .imageCard a:hover .overlay {
+    height: 100%;
+}
+
+.sliderContainer .imageSlider .imageSliderTrack .imageCard a .imageWrapper .overlay .overlayContent {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #f8eae2;
+    font-size: 32px;
+}
+
+.sliderContainer .imageSlider .imageSliderTrack .imageCard a .imageWrapper .overlay .overlayContent img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* 下方文字 */
+.sliderContainer .imageSlider .imageSliderTrack .imageCard a .caption {
+    margin-top: 8px;
+    text-shadow: 0px 1.6px 1.4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.sliderContainer .imageSlider .imageSliderTrack .imageCard a .caption h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #663a36;
+    margin: 0;
+}
+
+.sliderContainer .imageSlider .imageSliderTrack .imageCard a .caption h4 {
+    font-size: 16px;
+    font-weight: 300;
+    color: #663a36;
+    margin: 4px 0 0 0;
+    line-height: 1.4;
+}
+
+/* 標題和more */
+#mapText {
+    color: #665353;
+    text-shadow: 12px 5px 1.8px rgba(0, 0, 0, 0.25);
+    font-family: "GenWanMin2 TW";
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 30px;
+    transform: translateX(-300px);
+    animation: slide-in-svg 2s ease-out forwards;
+}
+
+.svgArrow {
+    transform: translateX(-300px);
+    animation: slide-in-svg 2s ease-out forwards;
+}
+
+@keyframes slide-in-svg {
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* 更多按鈕 */
+#moreArrow {
+    position: relative;
+    bottom: 20px;
+    left: 1150px;
+    z-index: 15;
+}
+
+#moreArrow img {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#moreArrow img:hover {
+    transform: scale(1.05);
+}
+
+/* 標題樣式 */
+#sliderTitle {
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+    margin-top: -10%;
+    margin-bottom: -10%;
+    margin-left: -50%;
+}
+
+.titleWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#sliderTitleImg {
+    height: auto;
+    width: 600px;
+    max-width: 100%; 
+}

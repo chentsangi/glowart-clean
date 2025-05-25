@@ -1,0 +1,230 @@
+/* The Modal (background) */
+.login,
+.register,
+.forgetPwd,
+.mailVerify,
+.newPwd {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+/* Modal Content/Box */
+.login-content,
+.register-content,
+.forgetPwd-content,
+.mailVerify-content,
+.newPwd-content {
+  position: relative;
+  border-radius: 15px;
+  padding: 30px 25px;
+  border: none;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: #999ba3ce;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+
+/* 標題文字 */
+.login-content p,
+.register-content p,
+.forgetPwd-content p,
+.mailVerify-content p,
+.newPwd-content p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #3d4762;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+
+.loginText {
+  font-family: GenWanMin2 TW;
+}
+
+/* 標題下裝飾線 */
+.login-content p::after,
+.register-content p::after,
+.forgetPwd-content p::after,
+.mailVerify-content p::after,
+.newPwd-content p::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #616D90, #8D96AF);
+  border-radius: 3px;
+}
+
+.loginPut {
+  width: 100%;
+  padding: 12px 15px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  background-color: #f5f7fa;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.loginPut:focus {
+  outline: none;
+  border-color: #616D90;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(97, 109, 144, 0.1);
+}
+
+/* 輸入欄位 icon placeholder */
+.loginPut[name="email"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23aaa' viewBox='0 0 16 16'%3E%3Cpath d='M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  padding-left: 35px;
+}
+
+.loginPut[name="password"] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23aaa' viewBox='0 0 16 16'%3E%3Cpath d='M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  padding-left: 35px;
+}
+
+/* 按鈕 */
+button {
+  background-color: #616D90;
+  color: #fff;
+  border: none;
+  padding: 12px 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: center;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(97, 109, 144, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  background-color: #3d4762;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(97, 109, 144, 0.4);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* 波紋效果 */
+button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+button:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+
+  20% {
+    transform: scale(25, 25);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: scale(50, 50);
+    opacity: 0;
+  }
+}
+
+/* 忘記密碼 立即註冊 */
+div>span {
+  color: #616D90;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 0 3px;
+}
+
+div>span:hover {
+  color: #3d4762;
+  /* text-decoration: underline; */
+}
+
+div>span:nth-child(2) {
+  color: #272424;
+  margin: 0 5px;
+  font-weight: normal;
+}
+
+/* 錯誤訊息樣式 */
+p[style*="color: red"] {
+  color: #d63031 !important;
+  background-color: #ffebee;
+  padding: 10px;
+  border-radius: 6px;
+  border-left: 4px solid #d63031;
+  font-size: 14px;
+  margin: 5px 0 15px;
+  text-align: left;
+}
+
+.close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.close:hover {
+  transform: rotate(90deg);
+}

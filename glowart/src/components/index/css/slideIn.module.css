@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+/* 調整容器以適應 Header 組件 */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    /* 確保在頁面底層 */
+    margin-top: -300px;
+}
+
+.imageWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: contain;
+}
+
+.image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+    /* 圖片不阻擋滑鼠事件 */
+    object-fit: cover;
+}
+
+/* 淡入淡出動畫類別 */
+.fadeIn {
+    opacity: 1;
+}
+
+.fadeOut {
+    opacity: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    /* 初始隱藏在左側 */
+    width: 55%;
+    height: 150%;
+    background: #e9e4e491;
+    color: #ab402d;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    transition: left 0.5s ease-in-out;
+    border-top-right-radius: 50%;
+    /* 右上角圓弧 */
+    border-bottom-right-radius: 50%;
+    /* 右下角圓弧 */
+    transform: translateY(-50%);
+    text-decoration: none;
+    /* 移除 a 標籤的底線 */
+    z-index: 2;
+    /* 確保在圖片上層但低於導航 */
+}
+
+.contentContainer {
+    width: 100%;
+}
+
+.exhibitionHeading {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.exhibitionLocation {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.exhibitionDateInfo {
+    color: rgb(90, 79, 79);
+    margin-bottom: 15px;
+}
+
+.container:hover .overlay {
+    left: 0;
+    /* 滑鼠移入時滑出 */
+}
+
+/* 保持 a 標籤在懸停時沒有底線 */
+.overlay:hover {
+    text-decoration: none;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

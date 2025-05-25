@@ -1,0 +1,242 @@
+/* ExhibitionsSubmission_Filter_Search.module.css */
+
+/* 全局樣式變數 */
+:root {
+  --primary-color: #616D90;
+  --secondary-color: #f3f3f3;
+  --filter-bg: #e0e3ec;
+  --text-color: #333;
+  --border-radius: 8px;
+  --transition: all 0.2s ease;
+}
+
+/* 搜尋欄區塊 */
+.searchWrapper {
+  text-align: right;
+  position: relative;
+  top: 20px;
+  right: 20px;
+  margin-bottom: 15px;
+}
+
+.searchContainer {
+  background-color: var(--filter-bg);
+  padding: 10px;
+  border-radius: var(--border-radius);
+  display: inline-flex;
+  align-items: center;
+}
+
+.searchLabel {
+  margin-right: 8px;
+  font-size: 16px;
+  color: var(--text-color);
+  font-family: GenWanMin2 TW;
+
+}
+
+.searchInput {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  width: 200px;
+  outline: none;
+}
+
+
+/* 整體內容容器 */
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+   align-items: flex-start;
+}
+
+/* 篩選表單 */
+.filterSearch {
+  border-radius: 15px;
+  background: #e0e3ec;
+  flex-direction: column;
+  padding: 10px 10px 10px 20px;
+  margin: 0;
+  margin-right: 20px;
+  flex: 0 0 400px;
+  display: flex;
+  position: relative;
+  left: 55px;
+  top: 45px;
+  align-self: flex-start;
+}
+
+/* 下拉式篩選區 */
+.formRow {
+  display: flex;
+  width: 100%;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.formRow label {
+  width: 40%;
+  font-size: 16px;
+  color: var(--text-color);
+  position: relative;
+}
+
+.formRow select {
+  width: 60%;
+  padding: 5px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 14px;
+}
+
+/* 類別篩選 */
+.labCategory {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.labCategory label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6px 4px;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.labCategory input[type="checkbox"] {
+  display: none;
+}
+
+.labCategory input[type="checkbox"]:checked+label {
+  background-color: #5d6d92;
+  color: white;
+  border-color: #5d6d92;
+}
+
+/* 支持舊的 gridContainer */
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.gridContainer label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6px 4px;
+  border-radius: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.gridContainer input[type="checkbox"] {
+  display: none;
+}
+
+.gridContainer input[type="checkbox"]:checked+label {
+  background-color: #5d6d92;
+  color: white;
+}
+
+/* 結果容器 */
+.resultContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  flex: 1;
+}
+
+.resultItem {
+  border: none;
+  flex: 0 0 calc(33.33% - 20px);
+  display: flex;
+  flex-direction: column;
+  max-width: calc(33.33% - 20px);
+}
+
+.resultItem h3 {
+  font-size: 16px;
+  margin: 8px 0;
+  color: var(--text-color);
+}
+
+.resultItem p {
+  margin: 4px 0;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+/* 分頁樣式 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px;
+  
+}
+
+.pagination button {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  background-color: white;
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  
+}
+
+.pagination button.active {
+  color: var(--secondary-color);
+}
+
+.textType {
+  position: relative;
+  top: 15px;
+}
+
+.searchImg {
+  color: #5d6d92;
+  width: 15px;
+  position: relative;
+  right: 2px;
+  bottom: 2px;
+}
+.searchButton {
+  background: none;
+  border: none;
+  margin-left: 8px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  bottom: 5px;
+}
+.searchButton:hover .searchImg{
+  color:white
+}

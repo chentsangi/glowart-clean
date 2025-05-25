@@ -1,0 +1,100 @@
+.svgArrow {
+  margin: 0 2%;
+  position: relative;
+  top: -80px;
+  z-index: 10;
+  transform: translateX(-300px);
+  animation: slideInSvg 1s ease-out forwards;
+}
+
+#artNews {
+  color: #665353;
+  text-shadow: 12px 5px 1.8px rgba(0, 0, 0, 0.25);
+  font-family: "GenWanMin2 TW";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 30px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.svgArrow svg {
+  margin-top: -15px;
+  position: relative;
+  top: -5px;
+}
+
+@keyframes slideInSvg {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.newsMain {
+  width: 1300px;
+  margin: auto;
+  padding: auto;
+  position: relative;
+  top: 50px;
+}
+
+.newsHeader {
+  line-height: 1em;
+  margin-bottom: 30px;
+}
+
+#artNewsDate {
+  color: rgba(128, 126, 118, 1);
+  letter-spacing: 8px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+#artNewsTitle {
+  color: #000;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+}
+
+#artNewsAuthor {
+  text-indent: 0em;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 8px;
+  width: 1000px;
+  justify-content: center;
+  text-align: justify;
+  line-height: 2em;
+  text-indent: 2.5em;
+  margin-bottom: 15px;
+}
+
+#artNewsDescription {
+  font-size: 18px;
+  letter-spacing: 8px;
+  width: 1000px;
+  justify-content: center;
+  text-align: justify;
+  line-height: 2em;
+  text-indent: 2.5em;
+}
+
+#artNewsDescription p {
+  margin-bottom: 10px;
+  padding: 0.5% 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+body {
+  font-family: "GenWanMin2 TW";
+}
+
+.errorMessage {
+  color: red;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 50px;
+}

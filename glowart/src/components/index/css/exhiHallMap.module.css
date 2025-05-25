@@ -1,0 +1,200 @@
+.allView {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    top: -150px;
+    margin-bottom: -200px;
+}
+
+.carouselWrapper {
+    margin-top: -0px;
+    position: relative;
+    width: 2500px;
+    height: 550px;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.item {
+    width: 400px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -75px 0 0 -205px;
+    transition: all 0.8s ease;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(0) translateY(50px) scale(0.8) rotate(0deg);
+}
+
+.center {
+    transform: translateX(0px) translateY(-50px) scale(1.3) rotate(0deg);
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 3;
+}
+
+.left {
+    transform: translateX(-500px) translateY(30px) scale(0.8) rotate(-10deg);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.right {
+    transform: translateX(500px) translateY(30px) scale(0.8) rotate(10deg);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.outLeft {
+    transform: translateX(-900px) translateY(50px) scale(0.8) rotate(-20deg);
+    opacity: 0;
+    z-index: 1;
+}
+
+.outRight {
+    transform: translateX(900px) translateY(50px) scale(0.8) rotate(20deg);
+    opacity: 0;
+    z-index: 1;
+}
+
+.item img {
+    width: 400px;
+    height: 250px;
+    object-fit: fill;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    color: #CCA08C;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 5;
+}
+
+.prev {
+    left: 350px;
+    top: 350px;
+    filter: opacity(0.3);
+}
+
+.next {
+    right: 350px;
+    top: 350px;
+    filter: opacity(0.3);
+}
+
+.prev:hover,
+.next:hover {
+    filter: opacity(1);
+    transition: filter 0.3s ease;
+}
+
+/* 下方資訊卡片 */
+.infoCard {
+    background: #f7f5f5;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px 30px;
+    margin: auto;
+    width: 500px;
+    text-align: left;
+    position: relative;
+    top: -100px;
+}
+
+.infoCard ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.infoCard li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #333;
+    margin-left: 30px;
+}
+
+/* 為不同列表項目設置不同圖標 */
+.infoCard li:nth-child(1)::before {
+    content: "";
+    background-image: url('../../../../public/images/pinImg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.infoCard li:nth-child(2)::before {
+    content: "";
+    background-image: url('../../../../public/images/mapImg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.infoCard li:nth-child(3)::before {
+    content: "";
+    background-image: url('../../../../public/images/timeImg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#mapTitle {
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+    margin-top: -10%;
+    margin-left: -50%;
+}
+
+.mapTitleImg {
+    height: auto;
+    width: 600px;
+}
+
+.titleWrapper {
+    display: inline-block;
+}
+
+.mapTitleContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+}

@@ -1,0 +1,215 @@
+html,
+body {
+    font-family: GenWanMin2 TW;
+}
+
+#arrowBox1 {
+    position: relative;
+    z-index: 10;
+    text-align: right;
+    /* margin-top: -620px; */
+    margin-right: 2000px;
+    margin-bottom: -180px;
+    /* 使用負的 margin 靠近搜尋欄位 */
+
+
+
+
+}
+
+#arrowBox2 {
+    position: relative;
+    z-index: 5;
+    text-align: right;
+    margin-top: -8px;
+    margin-right: 2000px;
+    margin-bottom: -180px;
+}
+
+#newsBox {
+    /* width: 60%; */
+    background: #f8f5fa;
+    border-radius: 15px;
+    padding: 10px;
+    /* margin-left: 20%; */
+    /* margin: 0 50px 0 160px; */
+    z-index: 5;
+    position: relative;
+}
+
+.Box {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.newsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 500px;
+    overflow-y: auto;
+
+}
+
+.newsList li {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 20px;
+    margin: 0;
+}
+
+.newsList a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.newsList li div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.newsTitle {
+    flex: 1;
+    padding: 10px 15px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    color: #000000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.newsDate {
+    color: #000000;
+    font-size: 15px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+.newsList li:hover .newsTitle {
+    background-color: #d9dfe6;
+    font-size: 23px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.newsList li:hover .newsDate {
+    background-color: rgba(227, 190, 173, 0.87);
+    color: #333;
+    font-size: 23px;
+}
+
+/* 公告的 */
+#announcementBox {
+    background: #f8f5fa;
+    border-radius: 15px;
+    padding: 10px;
+    z-index: 5;
+    position: relative;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    /* margin-top: -160px; */
+    /* width: 1200px; */
+    /* margin: 0 50px 0 160px; */
+    /* margin-left: 360px; */
+}
+
+.announcementList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.announcementList li {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 20px;
+    margin: 0;
+}
+
+.announcementList a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.announcementList li div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.announcementTitle {
+    flex: 1;
+    padding: 10px 15px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    color: #000000;
+}
+
+.announcementDate {
+    color: #000000;
+    font-size: 15px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+.announcementList li:hover .announcementTitle {
+    background-color: #dce2ec;
+    font-size: 23px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.announcementList li:hover .announcementDate {
+    background-color: rgba(227, 190, 173, 0.87);
+    color: #333;
+    font-size: 23px;
+}
+
+.newsA {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.announcementA {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#arrowBoxImg1 {
+    height: auto;
+    width: 600px;
+}
+
+#arrowBoxImg2 {
+    height: auto;
+    width: 600px;
+}

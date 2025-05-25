@@ -1,0 +1,15 @@
+.layout {
+  display: flex;
+  width: 1400px;
+  margin: 0px auto 80px auto;
+  gap: 20px;
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+  background-color: #d9d9d989;
+  border-radius:20px;
+  justify-content: center;
+  position: relative;
+}

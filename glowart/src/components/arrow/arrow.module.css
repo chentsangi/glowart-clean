@@ -1,0 +1,23 @@
+#mapText {
+    color: #665353;
+    text-shadow: 12px 5px 1.8px rgba(0, 0, 0, 0.25);
+    /* font-family: "GenWanMin2 TW"; */
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 30px;
+    transform: translateX(-300px);
+    animation: slideInSvg 2s ease-out forwards;
+}
+
+.svgArrow {
+    transform: translateX(-300px);
+    animation: slideInSvg 2s ease-out forwards;
+}
+
+@keyframes slideInSvg {
+    to {
+        transform: translateX(0);
+    }
+}
